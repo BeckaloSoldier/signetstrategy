@@ -1,65 +1,87 @@
 import { Layout } from "@/components/Layout";
-import { Mail, Phone, Instagram } from "lucide-react";
+
+const details = [
+  { label: "Email", value: "hello@signetstrategy.com" },
+  { label: "Phone", value: "+1 (000) 000-0000" },
+  { label: "Location", value: "City, State" },
+  { label: "LinkedIn", value: "/in/your-profile" },
+];
 
 const Contact = () => {
   return (
-    <Layout showEchelonFooter>
-      <section className="container-wide py-16 md:py-24 min-h-[calc(100vh-200px)]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Content */}
-          <div className="space-y-12">
-            <div>
-              <h1 className="text-display mb-6 animate-fade-in-up">
-                Let's work<br />together.
-              </h1>
-              <p className="text-xl text-muted-foreground animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-                Interested in collaborating? Let's talk about your next project.
-              </p>
+    <Layout>
+      <section className="container-wide pt-12 md:pt-20 pb-12">
+        <p className="text-label">Private Enquiries</p>
+        <h1 className="mt-4 font-display text-5xl md:text-7xl font-light uppercase tracking-[0.14em]">
+          Contact Us
+        </h1>
+        <div className="rule-gold w-full mt-8" />
+      </section>
+
+      <section className="container-wide pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+          {/* Details */}
+          <div>
+            <p className="text-lg font-light leading-relaxed text-muted-foreground">
+              Placeholder introduction — how you prefer to be approached and what to
+              include in a first message.
+            </p>
+            <div className="mt-10">
+              {details.map((item) => (
+                <div
+                  key={item.label}
+                  className="flex items-baseline justify-between gap-6 border-t border-gold-line py-5"
+                >
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                    {item.label}
+                  </span>
+                  <span className="font-display text-lg md:text-xl tracking-wide">
+                    {item.value}
+                  </span>
+                </div>
+              ))}
+              <div className="border-t border-gold-line" />
             </div>
+          </div>
 
-            {/* Contact Info */}
-            <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <a
-                href="mailto:hello@jordanstudio.com"
-                className="flex items-center gap-4 text-lg hover-highlight group"
-              >
-                <Mail size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
-                <span>hello@jordanstudio.com</span>
-              </a>
-
-              <a
-                href="https://instagram.com/jordanstudio"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 text-lg hover-highlight group"
-              >
-                <Instagram size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
-                <span>@jordanstudio</span>
-              </a>
-
-              <div className="flex items-center gap-4 text-lg text-muted-foreground">
-                <Phone size={20} />
-                <span>+55 11 9999-9999</span>
+          {/* Form */}
+          <form
+            className="space-y-6"
+            onSubmit={(e) => e.preventDefault()}
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label htmlFor="name" className="text-label block mb-2">Name</label>
+                <input id="name" name="name" type="text" className="input-gold" placeholder="Your name" />
+              </div>
+              <div>
+                <label htmlFor="company" className="text-label block mb-2">Company</label>
+                <input id="company" name="company" type="text" className="input-gold" placeholder="Your company" />
               </div>
             </div>
 
-            {/* Location */}
-            <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              <p className="text-label mb-2">Based in</p>
-              <p className="text-lg">São Paulo, Brazil</p>
+            <div>
+              <label htmlFor="email" className="text-label block mb-2">Email</label>
+              <input id="email" name="email" type="email" className="input-gold" placeholder="you@company.com" />
             </div>
-          </div>
 
-          {/* Image */}
-          <div className="hidden lg:block">
-            <div className="aspect-[4/5] bg-secondary overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=800&h=1000&fit=crop"
-                alt="Contact"
-                className="w-full h-full object-cover"
-              />
+            <div>
+              <label htmlFor="project" className="text-label block mb-2">Project Type</label>
+              <input id="project" name="project" type="text" className="input-gold" placeholder="Branding, showroom, launch…" />
             </div>
-          </div>
+
+            <div>
+              <label htmlFor="message" className="text-label block mb-2">Message</label>
+              <textarea id="message" name="message" rows={5} className="input-gold resize-none" placeholder="Tell me about the product and the room." />
+            </div>
+
+            <button type="submit" className="btn-gold w-full sm:w-auto">
+              Send Enquiry
+            </button>
+            <p className="text-xs text-muted-foreground/70">
+              Placeholder form — not yet connected to a mailbox.
+            </p>
+          </form>
         </div>
       </section>
     </Layout>

@@ -1,73 +1,164 @@
-import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
-import { projects } from "@/data/projects";
+import { PlaceholderImage } from "@/components/PlaceholderImage";
+import logo from "@/assets/signet-logo.png.asset.json";
+
+const capabilities = [
+  {
+    number: "01",
+    title: "Brand Positioning",
+    copy: "Defining the territory a luxury product owns — and the language that makes it undeniable.",
+  },
+  {
+    number: "02",
+    title: "Product Storytelling",
+    copy: "Narrative architecture that carries a product from the first impression to the signature.",
+  },
+  {
+    number: "03",
+    title: "Showroom Positioning",
+    copy: "Physical and retail environments staged so the merchandise sells itself with restraint.",
+  },
+];
 
 const Index = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  // Get 8 unique cover images from projects for the grid (4x2)
-  const gridImages = projects.slice(0, 8).map(p => p.coverImage);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!containerRef.current) return;
-    
-    const rect = containerRef.current.getBoundingClientRect();
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    
-    // Calculate offset from center (normalized to -1 to 1)
-    const x = (e.clientX - rect.left - centerX) / centerX;
-    const y = (e.clientY - rect.top - centerY) / centerY;
-    
-    setMousePosition({ x, y });
-  };
-
   return (
-    <Layout hideFooter noPadding>
-      <section 
-        ref={containerRef}
-        onMouseMove={handleMouseMove}
-        className="relative h-screen overflow-hidden"
-      >
-        {/* Image Grid Background with Parallax - 4 columns x 2 rows */}
-        <div 
-          className="absolute inset-0 flex items-center justify-center transition-transform duration-700 ease-out"
-          style={{
-            transform: `translate(${-mousePosition.x * 40}px, ${-mousePosition.y * 40}px)`,
-          }}
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 p-12 md:p-16 w-full max-w-7xl">
-            {gridImages.map((image, index) => (
-              <div 
-                key={index}
-                className="aspect-[3/4] overflow-hidden"
-              >
-                <img
-                  src={image}
-                  alt=""
-                  className="w-full h-full object-cover opacity-60"
-                />
+    <Layout noPadding>
+      {/* Hero */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6">
+        <div className="absolute inset-0 bg-gradient-vignette pointer-events-none" />
+
+        <div className="relative z-10 flex flex-col items-center text-center">
+          <img
+            src={logo.url}
+            alt="Signet Strategy signet mark"
+            className="w-32 md:w-44 lg:w-52 animate-fade-in"
+          />
+
+          <span className="mt-6 text-label animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            Private Consulting
+          </span>
+
+          <h1
+            className="mt-4 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light uppercase tracking-[0.18em] text-gradient-gold animate-fade-in-up"
+            style={{ animationDelay: "0.2s" }}
+          >
+            Signet Strategy
+          </h1>
+
+          <div className="rule-gold w-40 md:w-64 my-8 animate-fade-in" style={{ animationDelay: "0.3s" }} />
+
+          <p
+            className="max-w-2xl text-base md:text-xl font-sans font-light leading-relaxed text-muted-foreground animate-fade-in-up"
+            style={{ animationDelay: "0.4s" }}
+          >
+            Luxury product branding and showroom positioning for owners who intend
+            to be remembered.
+          </p>
+
+          <Link
+            to="/contact"
+            className="btn-gold mt-10 animate-fade-in-up"
+            style={{ animationDelay: "0.5s" }}
+          >
+            Request a Consultation
+          </Link>
+        </div>
+
+        <span className="absolute bottom-8 text-[10px] uppercase tracking-[0.3em] text-muted-foreground/70">
+          Scroll
+        </span>
+      </section>
+
+      {/* Statement */}
+      <section className="border-t border-separator bg-surface">
+        <div className="container-wide py-20 md:py-28">
+          <p className="max-w-4xl font-display text-2xl md:text-4xl lg:text-5xl font-light leading-snug tracking-wide">
+            A signet is proof of authorship. We build brands that leave one —
+            <span className="text-gradient-gold"> precise, deliberate, and impossible to counterfeit.</span>
+          </p>
+        </div>
+      </section>
+
+      {/* Capabilities */}
+      <section className="border-t border-separator">
+        <div className="container-wide py-20 md:py-28">
+          <p className="text-label mb-12">Capabilities</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10">
+            {capabilities.map((item) => (
+              <div key={item.number} className="border-t border-gold-line pt-6">
+                <span className="font-display text-sm tracking-[0.3em] text-gradient-gold">
+                  {item.number}
+                </span>
+                <h2 className="mt-4 font-display text-2xl md:text-3xl font-light uppercase tracking-[0.12em]">
+                  {item.title}
+                </h2>
+                <p className="mt-4 text-sm md:text-base font-sans font-light leading-relaxed text-muted-foreground">
+                  {item.copy}
+                </p>
               </div>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-background/30" />
+      {/* Headshot feature band */}
+      <section className="border-t border-separator bg-surface">
+        <div className="container-wide py-20 md:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            {/* Portraits */}
+            <div className="relative pb-20 pr-16 sm:pb-24 sm:pr-24">
+              <PlaceholderImage
+                label="Primary headshot"
+                ratio="3 / 4"
+                className="w-full max-w-md"
+              />
+              <PlaceholderImage
+                label="Secondary headshot"
+                ratio="1 / 1"
+                className="absolute bottom-0 right-0 w-40 sm:w-56 shadow-elegant"
+              />
+            </div>
 
-        {/* Centered Title - Overlaid */}
-        <div className="absolute inset-0 flex items-center justify-center z-10">
-          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tight text-foreground">
-            Jordan Studio
-          </h1>
+            {/* Copy */}
+            <div>
+              <p className="text-label">Meet the Strategist</p>
+              <h2 className="mt-4 font-display text-3xl md:text-5xl font-light uppercase tracking-[0.12em]">
+                Counsel at the
+                <span className="block text-gradient-gold">owner&rsquo;s table</span>
+              </h2>
+              <div className="rule-gold w-24 my-8" />
+              <p className="text-base md:text-lg font-sans font-light leading-relaxed text-muted-foreground">
+                Placeholder introduction — a short, confident paragraph about who you
+                are, the calibre of client you advise, and the standard you hold
+                every engagement to.
+              </p>
+              <p className="mt-4 text-base md:text-lg font-sans font-light leading-relaxed text-muted-foreground">
+                Placeholder second paragraph — your background, notable rooms
+                you&rsquo;ve worked in, and the outcome an owner can expect.
+              </p>
+              <Link to="/about" className="btn-gold-ghost mt-10">
+                About Me
+              </Link>
+            </div>
+          </div>
         </div>
+      </section>
 
-        {/* Bio - Bottom Left */}
-        <div className="absolute bottom-8 md:bottom-12 left-6 md:left-12 z-10 max-w-xs md:max-w-sm">
-          <p className="text-sm md:text-base font-sans text-foreground/80 leading-relaxed">
-            Hi! I'm Jordan, an independent artist and designer specializing in brand identity, illustration, and visual design. I help brands tell their stories through thoughtful, distinctive creative work.
+      {/* Closing CTA */}
+      <section className="border-t border-separator">
+        <div className="container-wide py-20 md:py-28 text-center">
+          <h2 className="font-display text-3xl md:text-5xl font-light uppercase tracking-[0.15em]">
+            Begin the conversation
+          </h2>
+          <div className="rule-gold w-32 mx-auto my-8" />
+          <p className="mx-auto max-w-xl text-muted-foreground font-light">
+            Engagements are limited and taken privately. Share the product, the
+            room, and the ambition.
           </p>
+          <Link to="/contact" className="btn-gold mt-10">
+            Contact Us
+          </Link>
         </div>
       </section>
     </Layout>
