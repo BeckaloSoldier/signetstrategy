@@ -19,9 +19,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Syne', 'system-ui', 'sans-serif'],
-        serif: ['Playfair Display', 'Georgia', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Cormorant Garamond', 'Georgia', 'serif'],
+        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+        script: ['Amoresa', 'Italianno', 'cursive'],
+        sans: ['Jost', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -60,6 +61,16 @@ export default {
         hover: {
           bg: "hsl(var(--hover-bg))",
         },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
+          deep: "hsl(var(--gold-deep))",
+          line: "hsl(var(--gold-line))",
+        },
+        surface: {
+          DEFAULT: "hsl(var(--surface))",
+          raised: "hsl(var(--surface-raised))",
+        },
         separator: "hsl(var(--separator))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -76,6 +87,13 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        "gradient-gold": "var(--gradient-gold)",
+        "gradient-vignette": "var(--gradient-vignette)",
+      },
+      boxShadow: {
+        elegant: "var(--shadow-elegant)",
       },
       keyframes: {
         "accordion-down": {

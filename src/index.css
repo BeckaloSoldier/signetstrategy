@@ -4,95 +4,72 @@
 
 @layer base {
   :root {
-    /* Light theme */
-    --background: 0 0% 98%;
-    --foreground: 0 0% 5%;
+    /* Signet Strategy — black, warm white, brushed gold */
+    --background: 0 0% 4%;
+    --foreground: 40 33% 94%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 5%;
+    --surface: 30 8% 7%;
+    --surface-raised: 32 8% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 5%;
+    --card: 30 8% 7%;
+    --card-foreground: 40 33% 94%;
 
-    --primary: 60 100% 45%;
-    --primary-foreground: 0 0% 5%;
+    --popover: 30 8% 7%;
+    --popover-foreground: 40 33% 94%;
 
-    --secondary: 0 0% 92%;
-    --secondary-foreground: 0 0% 15%;
+    --gold: 41 55% 54%;
+    --gold-light: 43 66% 74%;
+    --gold-deep: 40 50% 37%;
 
-    --muted: 0 0% 90%;
-    --muted-foreground: 0 0% 40%;
+    --primary: 41 55% 54%;
+    --primary-foreground: 0 0% 4%;
 
-    --accent: 66 100% 50%;
-    --accent-foreground: 0 0% 5%;
+    --secondary: 32 8% 12%;
+    --secondary-foreground: 40 33% 94%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --muted: 30 6% 14%;
+    --muted-foreground: 40 10% 68%;
 
-    --border: 0 0% 85%;
-    --input: 0 0% 85%;
-    --ring: 60 100% 45%;
+    --accent: 41 55% 54%;
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 62% 46%;
+    --destructive-foreground: 40 33% 94%;
+
+    --border: 40 20% 18%;
+    --input: 40 20% 18%;
+    --ring: 41 55% 54%;
 
     --radius: 0rem;
 
     /* Custom tokens */
-    --hover-bg: 0 0% 95%;
-    --separator: 0 0% 88%;
+    --hover-bg: 32 8% 10%;
+    --separator: 40 15% 15%;
+    --gold-line: 41 40% 32%;
+
+    --gradient-gold: linear-gradient(
+      135deg,
+      hsl(var(--gold-light)) 0%,
+      hsl(var(--gold)) 45%,
+      hsl(var(--gold-deep)) 75%,
+      hsl(var(--gold-light)) 100%
+    );
+    --gradient-vignette: radial-gradient(
+      ellipse at 50% 40%,
+      hsl(var(--gold) / 0.1) 0%,
+      hsl(var(--background) / 0) 60%
+    );
+    --shadow-elegant: 0 24px 60px -20px hsl(0 0% 0% / 0.85);
 
     /* Sidebar */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 5%;
-    --sidebar-primary: 60 100% 45%;
-    --sidebar-primary-foreground: 0 0% 5%;
-    --sidebar-accent: 0 0% 92%;
-    --sidebar-accent-foreground: 0 0% 15%;
-    --sidebar-border: 0 0% 88%;
-    --sidebar-ring: 60 100% 45%;
-  }
-
-  .dark {
-    /* Dark theme - Echelon style */
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 100%;
-
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 100%;
-
-    --primary: 60 100% 50%;
-    --primary-foreground: 0 0% 0%;
-
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
-
-    --accent: 66 100% 50%;
-    --accent-foreground: 0 0% 0%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 60 100% 50%;
-
-    /* Custom tokens */
-    --hover-bg: 0 0% 8%;
-    --separator: 0 0% 15%;
-
-    /* Sidebar */
-    --sidebar-background: 0 0% 3%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 60 100% 50%;
-    --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 0 0% 10%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 60 100% 50%;
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 40 33% 94%;
+    --sidebar-primary: 41 55% 54%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 32 8% 12%;
+    --sidebar-accent-foreground: 40 33% 94%;
+    --sidebar-border: 40 15% 15%;
+    --sidebar-ring: 41 55% 54%;
   }
 
   * {
@@ -105,11 +82,12 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Jost', system-ui, sans-serif;
+    font-weight: 300;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
   }
 }
 
@@ -121,17 +99,63 @@
 
   .text-display {
     @apply text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
   }
 
   .text-headline {
     @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
   }
 
   .text-label {
-    @apply text-xs md:text-sm uppercase tracking-widest text-muted-foreground;
-    font-family: 'Inter', sans-serif;
+    @apply text-[10px] md:text-xs uppercase tracking-[0.3em] text-muted-foreground;
+    font-family: 'Jost', system-ui, sans-serif;
+  }
+
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .rule-gold {
+    height: 1px;
+    background: var(--gradient-gold);
+    opacity: 0.85;
+  }
+
+  .btn-gold {
+    @apply inline-block px-9 py-4 text-[11px] uppercase tracking-[0.3em] transition-all duration-300;
+    font-family: 'Jost', system-ui, sans-serif;
+    background: var(--gradient-gold);
+    color: hsl(var(--primary-foreground));
+  }
+
+  .btn-gold:hover {
+    filter: brightness(1.12);
+    letter-spacing: 0.36em;
+  }
+
+  .btn-gold-ghost {
+    @apply inline-block px-9 py-4 text-[11px] uppercase tracking-[0.3em] border transition-all duration-300;
+    font-family: 'Jost', system-ui, sans-serif;
+    border-color: hsl(var(--gold-line));
+    color: hsl(var(--gold-light));
+  }
+
+  .btn-gold-ghost:hover {
+    border-color: hsl(var(--gold));
+    background: hsl(var(--gold) / 0.08);
+  }
+
+  .input-gold {
+    @apply w-full bg-transparent border-b px-0 py-3 text-base font-light text-foreground placeholder:text-muted-foreground/50 outline-none transition-colors duration-300;
+    border-color: hsl(var(--separator));
+  }
+
+  .input-gold:focus {
+    border-color: hsl(var(--gold));
   }
 
   .hover-highlight {
