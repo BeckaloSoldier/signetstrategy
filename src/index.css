@@ -42,6 +42,9 @@
 
     --radius: 0rem;
 
+    /* Global background image opacity — adjust 0–1 to taste */
+    --site-bg-opacity: 0.65;
+
     /* Custom tokens */
     --hover-bg: 32 8% 10%;
     --separator: 40 15% 15%;
