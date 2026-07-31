@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import logo from "@/assets/signet-logo.png.asset.json";
-import websiteBackground from "@/assets/website-background.png.asset.json";
 
 const capabilities = [
   {
@@ -27,13 +26,6 @@ const Index = () => {
     <Layout noPadding>
       {/* Hero */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6">
-        <img
-          src={websiteBackground.url}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-left-bottom"
-        />
-        <div className="absolute inset-0 bg-background/60 pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-vignette pointer-events-none" />
 
         <div className="relative z-10 flex flex-col items-center text-center">
