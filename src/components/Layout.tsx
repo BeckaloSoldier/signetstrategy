@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import websiteBackground from "@/assets/website-background.png.asset.json";
 
 interface LayoutProps {
   children: ReactNode;
