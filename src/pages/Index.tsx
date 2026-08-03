@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
-import logo from "@/assets/signet-logo.png.asset.json";
 
 const capabilities = [
   {
@@ -29,13 +28,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-vignette pointer-events-none" />
 
         <div className="relative z-10 flex flex-col items-center text-center">
-          <img
-            src={logo.url}
-            alt="Signet Strategy signet mark"
-            className="w-32 md:w-44 lg:w-52 animate-fade-in"
-          />
-
-          <span className="mt-6 text-label animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <span className="text-label animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
             Private Consulting
           </span>
 
