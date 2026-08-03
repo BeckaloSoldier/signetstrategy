@@ -62,7 +62,7 @@ export function Header({ revealMode = false }: HeaderProps) {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={36} /> : <Menu size={36} />}
           </button>
         </div>
       </div>
