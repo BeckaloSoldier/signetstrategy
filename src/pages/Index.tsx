@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
-import logo from "@/assets/signet-logo.png.asset.json";
 
 const capabilities = [
   {
