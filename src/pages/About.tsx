@@ -37,8 +37,7 @@ const About = () => {
   return (
     <Layout>
       <section className="container-wide pt-12 md:pt-20 pb-12">
-        <p className="text-label">The Principal</p>
-        <h1 className="mt-4 font-display text-4xl md:text-6xl font-light uppercase tracking-[0.12em]">
+        <h1 className="font-display text-4xl md:text-6xl font-light uppercase tracking-[0.12em]">
           The Story Behind Signet Strategy
         </h1>
         <div className="rule-gold w-full mt-8" />
