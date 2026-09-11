@@ -1,5 +1,5 @@
 import { Layout } from "@/components/Layout";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
+import headshotAsset from "@/assets/headshot.png.asset.json";
 
 const acts = [
   {
