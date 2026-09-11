@@ -149,7 +149,7 @@ const Index = () => {
       <section className="border-t border-separator">
         <div className="container-wide py-20 md:py-28 text-center">
           <h2 className="font-display text-3xl md:text-5xl font-light uppercase tracking-[0.15em]">
-            Begin the conversation
+            Let's Talk
           </h2>
           <div className="rule-gold w-32 mx-auto my-8" />
           <p className="mx-auto max-w-xl text-muted-foreground font-light">
