@@ -101,7 +101,7 @@ const Index = () => {
         <div className="container-wide py-20 md:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             {/* Portraits */}
-            <div className="relative pb-20 pr-16 sm:pb-24 sm:pr-24">
+            <div className="flex flex-col items-center gap-8">
               <div className="relative bg-surface-raised border border-gold-line w-full max-w-md" style={{ aspectRatio: "3 / 4" }}>
                 <div className="absolute inset-3 border border-gold-line/60 z-10 pointer-events-none" />
                 <img
@@ -110,7 +110,7 @@ const Index = () => {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute bottom-0 right-0 w-40 sm:w-56 shadow-elegant bg-surface-raised border border-gold-line" style={{ aspectRatio: "1 / 1" }}>
+              <div className="relative w-44 sm:w-60 shadow-elegant bg-surface-raised border border-gold-line" style={{ aspectRatio: "1 / 1" }}>
                 <div className="absolute inset-3 border border-gold-line/60 z-10 pointer-events-none" />
                 <img
                   src={secondaryHeadshotAsset.url}
