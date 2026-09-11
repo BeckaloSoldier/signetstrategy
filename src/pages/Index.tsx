@@ -153,8 +153,7 @@ const Index = () => {
           </h2>
           <div className="rule-gold w-32 mx-auto my-8" />
           <p className="mx-auto max-w-xl text-muted-foreground font-light">
-            Engagements are limited and taken privately. Share the product, the
-            room, and the ambition.
+            Engagements are limited and taken privately with full, upfront respect to client confidentiality. Complete the form below and I will respond within 48 hours.
           </p>
           <Link to="/contact" className="btn-gold mt-10">
             Contact Us
