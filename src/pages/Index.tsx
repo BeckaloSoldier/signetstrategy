@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
+import headshotAsset from "@/assets/headshot.png.asset.json";
 
 const capabilities = [
   {
@@ -101,11 +102,14 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             {/* Portraits */}
             <div className="relative pb-20 pr-16 sm:pb-24 sm:pr-24">
-              <PlaceholderImage
-                label="Primary headshot"
-                ratio="3 / 4"
-                className="w-full max-w-md"
-              />
+              <div className="relative bg-surface-raised border border-gold-line w-full max-w-md" style={{ aspectRatio: "3 / 4" }}>
+                <div className="absolute inset-3 border border-gold-line/60 z-10 pointer-events-none" />
+                <img
+                  src={headshotAsset.url}
+                  alt="Primary headshot"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
               <PlaceholderImage
                 label="Secondary headshot"
                 ratio="1 / 1"
