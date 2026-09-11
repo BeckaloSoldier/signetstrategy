@@ -11,8 +11,7 @@ const Contact = () => {
   return (
     <Layout>
       <section className="container-wide pt-12 md:pt-20 pb-12">
-        <p className="text-label">Private Enquiries</p>
-        <h1 className="mt-4 font-display text-5xl md:text-7xl font-light uppercase tracking-[0.14em]">
+        <h1 className="font-display text-5xl md:text-7xl font-light uppercase tracking-[0.14em]">
           Contact Us
         </h1>
         <div className="rule-gold w-full mt-8" />
