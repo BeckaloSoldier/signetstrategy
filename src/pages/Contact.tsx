@@ -1,10 +1,10 @@
 import { Layout } from "@/components/Layout";
 
 const details = [
-  { label: "Email", value: "hello@signetstrategy.com" },
-  { label: "Phone", value: "+1 (000) 000-0000" },
-  { label: "Location", value: "City, State" },
-  { label: "LinkedIn", value: "/in/your-profile" },
+  { label: "Email", value: "JBecker8896@gmail.com" },
+  { label: "Phone", value: "+1 (716) 698-7852" },
+  { label: "Location", value: "Buffalo, NY" },
+  { label: "LinkedIn", value: "www.linkedin.com/in/john-becker-3754a7134" },
 ];
 
 const Contact = () => {
