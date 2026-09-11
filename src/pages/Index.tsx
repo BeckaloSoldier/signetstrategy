@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
-import headshotAsset from "@/assets/headshot.png.asset.json";
+import headshotAsset from "@/assets/headshot-new.png.asset.json";
+import secondaryHeadshotAsset from "@/assets/headshot.png.asset.json";
 
 const capabilities = [
   {
@@ -110,11 +110,14 @@ const Index = () => {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
-              <PlaceholderImage
-                label="Secondary headshot"
-                ratio="1 / 1"
-                className="absolute bottom-0 right-0 w-40 sm:w-56 shadow-elegant"
-              />
+              <div className="absolute bottom-0 right-0 w-40 sm:w-56 shadow-elegant bg-surface-raised border border-gold-line" style={{ aspectRatio: "1 / 1" }}>
+                <div className="absolute inset-3 border border-gold-line/60 z-10 pointer-events-none" />
+                <img
+                  src={secondaryHeadshotAsset.url}
+                  alt="Secondary headshot"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
             </div>
 
             {/* Copy */}

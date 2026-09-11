@@ -1,5 +1,5 @@
 import { Layout } from "@/components/Layout";
-import headshotAsset from "@/assets/headshot.png.asset.json";
+import headshotAsset from "@/assets/headshot-new.png.asset.json";
 
 const acts = [
   {
