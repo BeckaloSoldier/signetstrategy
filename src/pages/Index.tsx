@@ -122,7 +122,7 @@ const Index = () => {
 
             {/* Copy */}
             <div>
-              <p className="text-label">About</p>
+              <p className="text-label">About John Becker</p>
               <h2 className="mt-4 font-display text-3xl md:text-5xl font-light uppercase tracking-[0.12em]">
                 The Showroom
                 <span className="block text-gradient-gold">Turnaround Specialist</span>
