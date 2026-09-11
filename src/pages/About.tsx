@@ -47,7 +47,14 @@ const About = () => {
       <section className="container-wide pb-16 md:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-20 items-start">
           <div className="lg:col-span-2 lg:sticky lg:top-28">
-            <PlaceholderImage label="Portrait headshot" ratio="4 / 5" className="w-full" />
+            <div className="relative bg-surface-raised border border-gold-line w-full" style={{ aspectRatio: "4 / 5" }}>
+              <div className="absolute inset-3 border border-gold-line/60 z-10 pointer-events-none" />
+              <img
+                src={headshotAsset.url}
+                alt="Portrait headshot"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
           </div>
 
           <div className="lg:col-span-3 space-y-6">
