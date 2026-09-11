@@ -15,7 +15,7 @@ const acts = [
   {
     act: "Act III",
     title: "The Trial by Fire",
-    copy: "When I joined Buffalo Plumbing Showroom at Erb Company as Marketing Director, organizational turnover six months in left me as the sole remaining team member with experience in high-margin products. I was handed total responsibility for the showroom's accounts, operations, and future. I rebuilt the culture by recruiting and mentoring an entirely new team, pitched investment strategies to secure full-scale showroom renovations, authored marketing campaigns, produced television commercials, represented the company at national conferences, and managed every level of daily operations. Over five years, I grew the showroom's annual revenue from $400K to $1.2M.",
+    copy: "When I joined Buffalo Plumbing Showroom at Erb Company as Marketing Director, organizational turnover six months in left me as the sole remaining team member with experience in high-margin products. I was handed total responsibility for the showroom's accounts, operations, and future. I rebuilt the culture by recruiting and mentoring an entirely new team, pitched investment strategies to secure full-scale showroom renovations, authored marketing campaigns, produced television commercials, represented the company at national conferences, and managed every level of daily operations. Over five years, I learned an industry, rebuilt a full team of expert consultants who took genuine pride in their work, and tripled the annual revenue of Buffalo Plumbing Showroom.",
   },
   {
     act: "Act IV",
