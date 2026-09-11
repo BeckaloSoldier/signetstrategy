@@ -20,7 +20,7 @@ const acts = [
   {
     act: "Act IV",
     title: "Launching Signet Strategy",
-    copy: "I founded Signet Strategy, LLC because trade showrooms and high-end B2B businesses don't need generic corporate advice—they need battle-tested, practical guidance from someone who has stood in their shoes. Through our proprietary Authentic Experience Diagnostic (AED), I combine floor plan optimization, customer-journey mapping, modern digital workflows, and deep sales psychology to help business owners refine their physical environments, align their sales teams, and create high-converting customer experiences.",
+    copy: "I founded Signet Strategy, LLC because trade showrooms and high-end B2B businesses don't need generic corporate advice—they need battle-tested, practical guidance from someone who has stood in their shoes. Through our proprietary Authentic Experience Diagnostic (AED), I combine floor plan optimization, customer-journey mapping, modern digital workflows, and deep sales psychology to help business owners refine their physical environments, align their sales teams, and create high-converting customer experiences. I didn't learn showroom strategy from a textbook, I built it in the trenches; and now, I put that obsession and expertise to work for you.",
   },
 ];
 
@@ -58,7 +58,7 @@ const About = () => {
               Every stage of my career has been a lesson in what makes a business truly succeed—from the psychology of luxury sales to the grit required to rebuild an enterprise from the ground up.
             </p>
             <p className="text-base font-light leading-relaxed text-muted-foreground italic border-l border-gold-line pl-6">
-              I didn't learn showroom strategy from a textbook. I built it in the trenches; and now, I put that expertise to work for you.
+              I didn't learn showroom strategy from a textbook, I built it in the trenches; and now, I put that obsession and expertise to work for you.
             </p>
           </div>
         </div>
