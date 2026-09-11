@@ -122,20 +122,20 @@ const Index = () => {
 
             {/* Copy */}
             <div>
-              <p className="text-label">Meet the Strategist</p>
+              <p className="text-label">About</p>
               <h2 className="mt-4 font-display text-3xl md:text-5xl font-light uppercase tracking-[0.12em]">
-                Counsel at the
-                <span className="block text-gradient-gold">owner&rsquo;s table</span>
+                The Showroom
+                <span className="block text-gradient-gold">Turnaround Specialist</span>
               </h2>
               <div className="rule-gold w-24 my-8" />
               <p className="text-base md:text-lg font-sans font-light leading-relaxed text-muted-foreground">
-                Placeholder introduction — a short, confident paragraph about who you
-                are, the calibre of client you advise, and the standard you hold
-                every engagement to.
+                With a degree in Business Administration from Washington & Jefferson College, and years of experience leading decorative product operations at Erb Company and Buffalo Plumbing Showroom, I built my career at the intersection of luxury product merchandising, localized marketing, and consultative sales strategy. My leadership in the high-end kitchen and bath sector provided firsthand insight into how product placement, spatial aesthetics, and showroom sales methodologies directly impact buyer trust and bottom-line revenue.
               </p>
               <p className="mt-4 text-base md:text-lg font-sans font-light leading-relaxed text-muted-foreground">
-                Placeholder second paragraph — your background, notable rooms
-                you&rsquo;ve worked in, and the outcome an owner can expect.
+                At Signet Strategy, I plan to guide clients through the Authentic Experience Diagnostic (AED) - a framework designed to evaluate and align physical showroom layouts, visual touchpoints, and sales execution with a company&rsquo;s core brand promise. Combining practical floor plan optimization, modern digital workflows, and proven retail sales principles, I help trade showrooms and B2B businesses optimize display environments, improve closing ratios, and drive higher margins from their showrooms.
+              </p>
+              <p className="mt-4 text-base md:text-lg font-sans font-light leading-relaxed text-muted-foreground">
+                Based in Western New York, I consult with businesses looking to modernize their customer experience from first impression to final sale.
               </p>
               <Link to="/about" className="btn-gold-ghost mt-10">
                 About Me
