@@ -29,10 +29,6 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-vignette pointer-events-none" />
 
         <div className="relative z-10 flex flex-col items-center text-center">
-          <span className="text-label animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Private Consulting
-          </span>
-
           <h1
             className="mt-4 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light uppercase tracking-[0.18em] text-gradient-gold animate-fade-in-up"
             style={{ animationDelay: "0.2s" }}
