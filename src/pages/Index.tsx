@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
-import headshotAsset from "@/assets/headshot.png.asset.json";
+import headshotAsset from "@/assets/headshot-new.png.asset.json";
+import secondaryHeadshotAsset from "@/assets/headshot.png.asset.json";
 
 const capabilities = [
   {
