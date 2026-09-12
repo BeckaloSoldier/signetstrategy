@@ -22,8 +22,10 @@ const Contact = () => {
           {/* Details */}
           <div>
             <p className="text-lg font-light leading-relaxed text-muted-foreground">
-              Placeholder introduction — how you prefer to be approached and what to
-              include in a first message.
+              Think you could use my services? Please complete the form below.
+            </p>
+            <p className="text-lg font-light leading-relaxed text-muted-foreground mt-6">
+              I will reach out within 1-3 business days to schedule a complimentary initial 30-minute consultation to explore the needs of your business.
             </p>
             <div className="mt-10">
               {details.map((item) => (
@@ -70,8 +72,8 @@ const Contact = () => {
             </div>
 
             <div>
-              <label htmlFor="message" className="text-label block mb-2">Message</label>
-              <textarea id="message" name="message" rows={5} className="input-gold resize-none" placeholder="Tell me about the product and the room." />
+              <label htmlFor="message" className="text-label block mb-2">Additional details</label>
+              <textarea id="message" name="message" rows={5} className="input-gold resize-none" placeholder="Tell me about your business and showroom." />
             </div>
 
             <button type="submit" className="btn-gold w-full sm:w-auto">
