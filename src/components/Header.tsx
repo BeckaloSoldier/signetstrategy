@@ -27,7 +27,7 @@ export function Header({ revealMode = false }: HeaderProps) {
               <img
                 src={logo.url}
                 alt="Signet Strategy"
-                className="h-[72px] md:h-[84px] w-auto transition-opacity duration-300 group-hover:opacity-80"
+                className="h-[79.2px] md:h-[92.4px] w-auto transition-opacity duration-300 group-hover:opacity-80"
               />
               <span className="hidden sm:block font-display text-[1.40625rem] md:text-[1.8984375rem] uppercase tracking-[0.32em] text-gradient-gold">
                 Signet Strategy
