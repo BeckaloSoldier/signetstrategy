@@ -64,7 +64,7 @@ const Index = () => {
       <section className="border-t border-separator bg-surface">
         <div className="container-wide py-20 md:py-28">
           <p className="max-w-4xl font-display text-2xl md:text-4xl lg:text-5xl font-light leading-snug tracking-wide">
-            A signet is proof of authorship. We build brands that leave one —
+            A Signet is proof of authorship. We build brands that leave one —
             <span className="text-gradient-gold"> precise, deliberate, and impossible to counterfeit.</span>
           </p>
         </div>
