@@ -48,7 +48,7 @@ const Index = () => {
 
           <Link
             to="/contact"
-            className="btn-gold mt-10 animate-fade-in-up"
+            className="btn-gold text-base px-14 py-6 mt-10 animate-fade-in-up"
             style={{ animationDelay: "0.5s" }}
           >
             Request a Consultation
@@ -73,11 +73,11 @@ const Index = () => {
       {/* Capabilities */}
       <section className="border-t border-separator">
         <div className="container-wide py-20 md:py-28">
-          <p className="text-label mb-12">Capabilities</p>
+          <p className="text-label text-[15px] md:text-lg mb-12">Capabilities</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10">
             {capabilities.map((item) => (
               <div key={item.number} className="border-t border-gold-line pt-6">
-                <span className="font-display text-sm tracking-[0.3em] text-gradient-gold">
+                <span className="font-display text-[21px] tracking-[0.3em] text-gradient-gold">
                   {item.number}
                 </span>
                 <h2 className="mt-4 font-display text-2xl md:text-3xl font-light uppercase tracking-[0.12em]">
@@ -148,10 +148,10 @@ const Index = () => {
             Let's Talk
           </h2>
           <div className="rule-gold w-32 mx-auto my-8" />
-          <p className="mx-auto max-w-xl text-muted-foreground font-light">
+          <p className="mx-auto max-w-xl text-2xl text-muted-foreground font-light">
             Engagements are limited and taken privately with full, upfront respect to client confidentiality. Complete the form below and I will respond within 48 hours.
           </p>
-          <Link to="/contact" className="btn-gold mt-10">
+          <Link to="/contact" className="btn-gold text-base px-14 py-6 mt-10">
             Contact Us
           </Link>
         </div>
