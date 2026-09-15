@@ -15,7 +15,6 @@ interface HeaderProps {
 
 export function Header({ revealMode = false }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [brandScale, setBrandScale] = useState(1);
   const location = useLocation();
 
   return (
@@ -24,10 +23,7 @@ export function Header({ revealMode = false }: HeaderProps) {
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div
-              className="flex items-center gap-3 transition-transform duration-200"
-              style={{ transform: `scale(${brandScale})`, transformOrigin: "left center" }}
-            >
+            <div className="flex items-center gap-3">
               <img
                 src={logo.url}
                 alt="Signet Strategy"
@@ -61,27 +57,6 @@ export function Header({ revealMode = false }: HeaderProps) {
               );
             })}
           </nav>
-
-          {/* Scale Slider */}
-          <div className="flex items-center gap-2 md:gap-3">
-            <label
-              htmlFor="brand-scale"
-              className="sr-only md:not-sr-only text-[10px] uppercase tracking-[0.2em] text-muted-foreground"
-            >
-              Scale
-            </label>
-            <input
-              id="brand-scale"
-              type="range"
-              min="0.5"
-              max="1.5"
-              step="0.05"
-              value={brandScale}
-              onChange={(e) => setBrandScale(parseFloat(e.target.value))}
-              className="w-20 md:w-28 accent-gold"
-              aria-label="Adjust logo and brand scale"
-            />
-          </div>
 
           {/* Mobile Menu Button */}
           <button
