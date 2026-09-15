@@ -148,10 +148,11 @@ const Index = () => {
             Let's Talk
           </h2>
           <div className="rule-gold w-32 mx-auto my-8" />
-          <p className="mx-auto max-w-xl text-2xl text-muted-foreground font-light">
+          <p className="mx-auto max-w-xl text-lg text-muted-foreground font-light">
             Engagements are limited and taken privately with full, upfront respect to client confidentiality. Complete the form below and I will respond within 48 hours.
           </p>
-          <Link to="/contact" className="btn-gold text-base px-14 py-6 mt-10">
+          <Link to="/contact" className="btn-gold text-xs px-[42px] py-[18px] mt-10">
+
             Contact Us
           </Link>
         </div>
