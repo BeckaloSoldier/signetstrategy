@@ -6,18 +6,18 @@ import secondaryHeadshotAsset from "@/assets/headshot-secondary.png.asset.json";
 const capabilities = [
   {
     number: "01",
-    title: "Brand Positioning",
-    copy: "Defining the territory a luxury product owns — and the language that makes it undeniable.",
+    title: "Authentic Experience Diagnostic (AED)",
+    copy: "An in-depth review of a showroom’s customer experience from beginning to the end of the process, from finding the website or google page all the way to the point of client after-care. Diagnostic can include but is not limited to: Showroom operations audit, showroom aesthetic and current-product evaluation, showroom service audit, branding and marketing audit, and SEO review.",
   },
   {
     number: "02",
-    title: "Product Storytelling",
-    copy: "Narrative architecture that carries a product from the first impression to the signature.",
+    title: "The Signet Gambit Playbook",
+    copy: "A deep, personalized, implementable strategy within given budgetary guidelines and business’s realm of feasibility. Strategies offered will be both tailored to the current strength of the business while striving for an authentic branding approach to instill customer loyalty, and differentiate their showrooms from the competition. Playbooks may include but are not limited to: Marketing campaigns, SEO strategies, showroom display consults, rebranding efforts, luxury sales training, pricing structure analysis, and product-mix reviews.",
   },
   {
     number: "03",
-    title: "Showroom Positioning",
-    copy: "Physical and retail environments staged so the merchandise sells itself with restraint.",
+    title: "The Transition & Valuation Defense",
+    copy: "A proprietary, three-phase transition advisory program designed specifically for small design-build showrooms preparing for ownership exit. The “TVD” operates as an active operational and financial stabilizer. It is designed to extract and map a founder’s strategic knowledge, support their valuation against buyer clawbacks, and eliminate \u201ckey-man\u201d risk to ensure a premium, successful exit.",
   },
 ];
 
@@ -73,7 +73,7 @@ const Index = () => {
       {/* Capabilities */}
       <section className="border-t border-separator">
         <div className="container-wide py-20 md:py-28">
-          <p className="text-label text-[15px] md:text-lg mb-12">Capabilities</p>
+          <p className="text-label text-[15px] md:text-lg mb-12">Signature Services</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10">
             {capabilities.map((item) => (
               <div key={item.number} className="border-t border-gold-line pt-6">
