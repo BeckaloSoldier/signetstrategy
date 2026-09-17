@@ -94,10 +94,10 @@ const Portfolio = () => {
       <section className="container-wide pb-14 pt-12 md:pb-20 md:pt-20">
         <p className="text-label">Visual Portfolio</p>
         <div className="mt-5 grid gap-8 md:grid-cols-[minmax(0,1fr)_20rem] md:items-end">
-          <h1 className="max-w-5xl font-display text-5xl font-light uppercase leading-[0.96] tracking-[0.08em] md:text-7xl lg:text-8xl">
+          <h1 className="max-w-5xl font-display text-4xl font-light uppercase leading-[0.96] tracking-[0.08em] md:text-[3.375rem] lg:text-7xl">
             The Transformation of <span className="text-gradient-gold">Buffalo Plumbing Showroom</span>
           </h1>
-          <p className="max-w-sm border-l border-gold-line/60 pl-5 text-sm font-light leading-7 text-muted-foreground">
+          <p className="max-w-sm border-l border-gold-line/60 pl-5 text-[0.65625rem] font-light leading-[1.3125rem] text-muted-foreground">
             A chronological visual record of the showroom’s evolution—from its original footprint through planning, transition, and final presentation.
           </p>
         </div>
