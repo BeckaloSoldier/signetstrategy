@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/signet-logo.png.asset.json";
+import logo from "@/assets/signet-icon.png";
 
 const navItems = [
   { label: "Portfolio", path: "/portfolio" },
@@ -25,7 +25,7 @@ export function Header({ revealMode = false }: HeaderProps) {
           <Link to="/" className="flex items-center gap-3 group">
             <div className="flex items-center gap-3">
               <img
-                src={logo.url}
+                src={logo}
                 alt="Signet Strategy"
                 className="h-[79.2px] md:h-[92.4px] w-auto transition-opacity duration-300 group-hover:opacity-80"
               />

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/signet-logo.png.asset.json";
+import logo from "@/assets/signet-logo-full.png";
 
 interface FooterProps {
   variant?: "default" | "echelon";
@@ -13,7 +13,7 @@ export function Footer({ variant = "default" }: FooterProps) {
       <div className="container-wide py-14 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
           <div>
-            <img src={logo.url} alt="Signet Strategy" className="h-20 w-auto" />
+            <img src={logo} alt="Signet Strategy" className="h-28 w-auto" />
             <p className="mt-5 max-w-xs text-sm font-light text-muted-foreground">
               Luxury product branding and showroom positioning.
             </p>
