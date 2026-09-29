@@ -33,10 +33,10 @@ export function Footer({ variant = "default" }: FooterProps) {
             <p className="text-label">Enquiries</p>
             <div className="text-sm space-y-2">
               <a
-                href="mailto:hello@signetstrategy.com"
+                href="mailto:JBecker8896@gmail.com"
                 className="block text-foreground/85 hover:text-gold-light transition-colors"
               >
-                hello@signetstrategy.com
+                JBecker8896@gmail.com
               </a>
               <p className="text-muted-foreground">By appointment only</p>
             </div>
