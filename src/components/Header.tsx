@@ -71,7 +71,7 @@ export function Header({ revealMode = false }: HeaderProps) {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-20 bg-background z-40 animate-fade-in">
+        <div className="md:hidden fixed inset-x-0 top-20 h-[calc(100dvh-5rem)] overflow-y-auto bg-background z-40 animate-fade-in">
           <nav className="container-wide py-14 flex flex-col gap-10">
             {[{ label: "Home", path: "/" }, ...navItems].map((item, index) => (
               <Link

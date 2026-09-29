@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import headshotPrimary from "@/assets/headshot-primary.jpg";
-import headshotSecondary from "@/assets/headshot-secondary.jpg";
 
 const capabilities = [
   {
@@ -103,14 +102,6 @@ const Index = () => {
                 <img
                   src={headshotPrimary}
                   alt="John Becker, founder of Signet Strategy"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-              </div>
-              <div className="relative w-44 sm:w-60 shadow-elegant bg-surface-raised border border-gold-line" style={{ aspectRatio: "1 / 1" }}>
-                <div className="absolute inset-3 border border-gold-line/60 z-10 pointer-events-none" />
-                <img
-                  src={headshotSecondary}
-                  alt="John Becker"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
