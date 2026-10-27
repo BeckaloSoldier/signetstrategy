@@ -1,5 +1,5 @@
 import { Layout } from "@/components/Layout";
-import headshotPrimary from "@/assets/headshot-primary.jpg";
+import headshotPrimary from "@/assets/headshot-new.png.asset.json";
 
 const acts = [
   {
@@ -49,7 +49,7 @@ const About = () => {
             <div className="relative bg-surface-raised border border-gold-line w-full" style={{ aspectRatio: "4 / 5" }}>
               <div className="absolute inset-3 border border-gold-line/60 z-10 pointer-events-none" />
               <img
-                src={headshotPrimary}
+                src={headshotPrimary.url}
                 alt="John Becker, founder of Signet Strategy"
                 className="absolute inset-0 w-full h-full object-cover"
               />
