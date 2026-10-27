@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/signet-logo.png.asset.json";
+import logo from "@/assets/signet-icon.png";
 
 const navItems = [
   { label: "Portfolio", path: "/portfolio" },
@@ -25,7 +25,7 @@ export function Header({ revealMode = false }: HeaderProps) {
           <Link to="/" className="flex items-center gap-3 group">
             <div className="flex items-center gap-3">
               <img
-                src={logo.url}
+                src={logo}
                 alt="Signet Strategy"
                 className="h-[79.2px] md:h-[92.4px] w-auto transition-opacity duration-300 group-hover:opacity-80"
               />
@@ -71,7 +71,7 @@ export function Header({ revealMode = false }: HeaderProps) {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-20 bg-background z-40 animate-fade-in">
+        <div className="md:hidden fixed inset-x-0 top-20 h-[calc(100dvh-5rem)] overflow-y-auto bg-background z-40 animate-fade-in">
           <nav className="container-wide py-14 flex flex-col gap-10">
             {[{ label: "Home", path: "/" }, ...navItems].map((item, index) => (
               <Link
