@@ -1,5 +1,5 @@
 import { Layout } from "@/components/Layout";
-import headshotAsset from "@/assets/headshot-new.png.asset.json";
+import headshotPrimary from "@/assets/headshot-primary.jpg";
 
 const acts = [
   {
@@ -15,7 +15,7 @@ const acts = [
   {
     act: "Act III",
     title: "The Trial by Fire",
-    copy: "When I joined Buffalo Plumbing Showroom at Erb Company as Marketing Director, organizational turnover six months in left me as the sole remaining team member with experience in high-margin products. I was handed total responsibility for the showroom's accounts, operations, and future. I rebuilt the culture by recruiting and mentoring an entirely new team, pitched investment strategies to secure full-scale showroom renovations, authored marketing campaigns, produced television commercials, represented the company at national conferences, and managed every level of daily operations. Over five years, I learned an industry, rebuilt a full team of expert consultants who took genuine pride in their work, and tripled the annual revenue of Buffalo Plumbing Showroom.",
+    copy: "When I joined Buffalo Plumbing Showroom at Erb Company as Marketing Director, organizational turnover six months in left me as the sole remaining team member with experience in high-margin products. I was handed total responsibility for the showroom's accounts, operations, and future. I rebuilt the culture by recruiting and mentoring an entirely new team, pitched investment strategies to secure full-scale showroom renovations, authored marketing campaigns, produced television commercials, represented the company at national conferences, and managed multiple levels of daily operations. Over five years, I learned an industry, rebuilt a full team of expert consultants who took genuine pride in their work, and tripled the annual revenue of Buffalo Plumbing Showroom.",
   },
   {
     act: "Act IV",
@@ -49,8 +49,8 @@ const About = () => {
             <div className="relative bg-surface-raised border border-gold-line w-full" style={{ aspectRatio: "4 / 5" }}>
               <div className="absolute inset-3 border border-gold-line/60 z-10 pointer-events-none" />
               <img
-                src={headshotAsset.url}
-                alt="Portrait headshot"
+                src={headshotPrimary}
+                alt="John Becker, founder of Signet Strategy"
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
