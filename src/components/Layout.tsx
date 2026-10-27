@@ -1,8 +1,7 @@
 import { ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import backgroundDesktop from "@/assets/website-background-desktop.jpg";
-import backgroundMobile from "@/assets/website-background-mobile.jpg";
+import websiteBackground from "@/assets/website-background.png.asset.json";
 
 interface LayoutProps {
   children: ReactNode;
@@ -22,17 +21,13 @@ export function Layout({
   return (
     <div className="relative min-h-screen flex flex-col">
       {/* Global semi-static background */}
-      {/* Portrait screens (phones) get the tall version; everything else the wide one */}
-      <picture>
-        <source media="(orientation: portrait) and (max-width: 900px)" srcSet={backgroundMobile} />
-        <img
-          src={backgroundDesktop}
-          alt=""
-          aria-hidden="true"
-          className="fixed inset-0 w-full h-full object-cover object-left-bottom -z-20"
-          style={{ opacity: "var(--site-bg-opacity)" }}
-        />
-      </picture>
+      <img
+        src={websiteBackground.url}
+        alt=""
+        aria-hidden="true"
+        className="fixed inset-0 w-full h-full object-cover object-left-bottom -z-20"
+        style={{ opacity: "var(--site-bg-opacity)" }}
+      />
       <div className="fixed inset-0 bg-background/45 -z-10" aria-hidden="true" />
 
       <Header revealMode={headerRevealMode} />
