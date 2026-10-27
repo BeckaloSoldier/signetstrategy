@@ -37,7 +37,7 @@ interface PortfolioImage {
 }
 
 const images: PortfolioImage[] = [
-  { src: earlyExterior.url, alt: "Original Buffalo Plumbing Showroom exterior", year: "2017", phase: "Before", aspect: "landscape" },
+  { src: earlyExterior.url, alt: "Original Buffalo Plumbing Showroom exterior", year: "2021", phase: "Before", aspect: "landscape" },
   { src: originalShowroom.url, alt: "Original Buffalo Plumbing Showroom interior", year: "2022", phase: "Before", aspect: "landscape" },
   { src: showroomExterior.url, alt: "Buffalo Plumbing Showroom entrance before renovation", year: "2022", phase: "Before", aspect: "portrait" },
   { src: movingOne.url, alt: "Showroom floor during the desk move", year: "2022", phase: "Transition", aspect: "landscape" },
@@ -104,7 +104,7 @@ const Portfolio = () => {
         <div className="rule-gold mt-10 w-full" />
         <div className="mt-5 flex flex-wrap items-center justify-between gap-3 text-label">
           <span>Buffalo, New York</span>
-          <span>{images.length} photographs · 2017—completed</span>
+          <span>{images.length} photographs · 2021 – 2026</span>
         </div>
       </section>
 
